@@ -12,7 +12,8 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production ts-node .nuxt/index.js",
     "generate": "nuxt generate",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o .public"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
