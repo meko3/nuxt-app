@@ -1,5 +1,14 @@
 {
-  "watch": ["server"],
-  "ext": "ts",
+  "watch": [
+    "assets", 
+    "components",
+    "layouts",
+    "middleware",
+    "modules",
+    "pages",
+    "plugins",
+    "server"
+  ],
+  "ext": ".ts|.vue",
   "exec": "ts-node ./server/index.ts"
 }
