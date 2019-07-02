@@ -1,7 +1,8 @@
 import { configure } from "@storybook/vue";
 
-const loadStories =  () => {
-  require("../components/index");
+const req = require.context("../components", true, /.story.ts$/);
+function loadStories() {
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
