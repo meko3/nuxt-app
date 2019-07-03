@@ -1,5 +1,5 @@
 import * as express from "express";
-import { Nuxt, Builder } from "nuxt";
+const { Nuxt, Builder } = require("nuxt");
 import config from "../nuxt.config";
 const consola = require("consola");
 
