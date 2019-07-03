@@ -12,7 +12,13 @@ module.exports = async ({ config }) => {
     },
     module: {
       ...vueConfig.module,
-      rules: vueConfig.module.rules,
+      rules: [
+        ...vueConfig.module.rules,
+        {
+          test: /\.vue$/,
+          loader: 'vue-loader'
+        },
+      ],
     },
   }
 }

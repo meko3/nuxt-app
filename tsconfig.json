@@ -1,1 +1,20 @@
-{}
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "@types/node",
+      "@nuxt/vue-app",
+      "typings"
+    ],
+    "lib": [
+      "es2015",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "exclude": ["node_modules"]
+}
