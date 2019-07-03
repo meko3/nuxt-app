@@ -29,5 +29,7 @@ import { Menu } from "ant-design-vue";
 Vue.component(Menu.name, Menu);
 Vue.use(Menu);
 
-export default {}
+export default {
+  name: "Header",
+}
 </script>

@@ -1,6 +1,6 @@
 import * as express from "express";
-const { Nuxt, Builder } = require("nuxt");
 import config from "../nuxt.config";
+const { Nuxt, Builder } = require("nuxt");
 const consola = require("consola");
 
 // Import and Set Nuxt.js options

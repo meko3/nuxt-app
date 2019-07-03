@@ -1,4 +1,6 @@
 const vueConfig = require("@vue/cli-service/webpack.config.js");
+const path = require("path");
+const rootPath = path.resolve(__dirname, "../");
 
 module.exports = async ({ config }) => {
   return {
@@ -7,7 +9,8 @@ module.exports = async ({ config }) => {
       ...vueConfig.resolve,
       alias: {
         ...vueConfig.resolve.alias,
-        "vue$": "vue/dist/vue.esm.js"
+        "vue$": "vue/dist/vue.esm.js",
+        "~": rootPath,
       },
     },
     module: {
@@ -16,7 +19,11 @@ module.exports = async ({ config }) => {
         ...vueConfig.module.rules,
         {
           test: /\.vue$/,
-          loader: 'vue-loader'
+          loader: 'vue-loader',
+        },
+        {
+          test: /\.ts$/,
+          loader: 'ts-loader',
         },
       ],
     },
