@@ -46,12 +46,24 @@ const config: NuxtConfiguration = {
   /*
    ** Build configuration
    */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend: () => {},
-  },
+  /*
+  ** Build configuration
+  */
+ build: {
+  /*
+  ** Run ESLint on save
+  */
+  extend (config, { isDev, isClient }) {
+    if (isDev && isClient) {
+      (config.module || { rules : []}).rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/
+      })
+    }
+  }
+}
 };
 
 export default config;
