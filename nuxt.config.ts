@@ -1,5 +1,11 @@
 import NuxtConfiguration from "@nuxt/config";
 
+const routerBase = process.env.DEPLOY_ENV == "GH_PAGES" ? {
+  router: {
+    base: "/nuxt-app/",
+  }
+} : {}
+
 const config: NuxtConfiguration = {
   mode: "universal",
   /*
@@ -50,20 +56,21 @@ const config: NuxtConfiguration = {
   ** Build configuration
   */
  build: {
-  /*
-  ** Run ESLint on save
-  */
-  extend (config, { isDev, isClient }) {
-    if (isDev && isClient) {
-      (config.module || { rules : []}).rules.push({
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /(node_modules)/
-      })
+    /*
+    ** Run ESLint on save
+    */
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        (config.module || { rules : []}).rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
-  }
-}
+  },
+  ...routerBase,
 };
 
 export default config;
