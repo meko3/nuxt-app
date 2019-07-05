@@ -7,7 +7,7 @@ import { linkTo } from "@storybook/addon-links"
 import MyButton from "./MyButton"
 import Welcome from "./Welcome"
 
-storiesOf("Welcome", module).add("to Storybook", () => ({
+storiesOf("Sample|Welcome", module).add("to Storybook", () => ({
   components: {
     Welcome
   },
@@ -17,7 +17,7 @@ storiesOf("Welcome", module).add("to Storybook", () => ({
   }
 }))
 
-storiesOf("Button", module)
+storiesOf("Sample|Button", module)
   .add("with text", () => ({
     components: {
       MyButton
