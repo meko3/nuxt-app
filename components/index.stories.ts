@@ -1,5 +1,5 @@
 import { storiesOf } from "@storybook/vue"
-import Logo from "./Logo.vue"
+import Logo from "./logo/Logo.vue"
 import Vue from "vue"
 
 Vue.component("logo", Logo);
