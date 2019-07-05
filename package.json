@@ -13,8 +13,9 @@
     "start": "cross-env NODE_ENV=production ts-node .nuxt/index.js",
     "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy": "npx gh-pages -d dist/ -e docs -b master",
+    "deploy:story": "npx gh-pages -d docs/ -e docs -b master",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o docs"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
