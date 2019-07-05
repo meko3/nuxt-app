@@ -11,10 +11,10 @@
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production ts-node .nuxt/index.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o docs",
     "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "npx gh-pages -d dist/ -e docs -b master"
+    "deploy": "npx gh-pages -d dist/ -e docs -b master",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -24,9 +24,13 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.0",
     "@nuxt/typescript": "^2.8.1",
     "@nuxtjs/eslint-config": "^0.0.1",
     "@nuxtjs/eslint-module": "^0.0.1",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
     "@storybook/vue": "^5.1.9",
     "@types/consola": "^1.0.0",
     "@types/express": "^4.17.0",
@@ -39,6 +43,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
