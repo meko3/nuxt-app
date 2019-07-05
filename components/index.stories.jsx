@@ -31,7 +31,7 @@ storiesOf("Button", module)
     components: {
       MyButton
     },
-    render(h) {
+    render() {
       return <my-button onClick={this.action}> With JSX </my-button>
     },
     methods: {
