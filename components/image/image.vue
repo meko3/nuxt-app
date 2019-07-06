@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div class="treasure" />
-  </div>
+  <div class="treasure" />
 </template>
 
-<style>
+<style scoped>
 .treasure {
   height: 200px;
-  background: url(../../assets/treasure.svg) no-repeat;
+  background: url(~assets/treasure.svg) no-repeat;
 }
 </style>

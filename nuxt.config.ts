@@ -1,10 +1,15 @@
 import NuxtConfiguration from "@nuxt/config";
+const path = require("path");
 
 const routerBase = process.env.DEPLOY_ENV == "GH_PAGES" ? {
   router: {
     base: "/nuxt-app/",
   }
-} : {}
+} : {
+  router: {
+    base: path.resolve(__dirname, "dist"),
+  }
+}
 
 const config: NuxtConfiguration = {
   mode: "universal",
@@ -49,9 +54,10 @@ const config: NuxtConfiguration = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  /*
-   ** Build configuration
+  /**
+   * Basic
    */
+  srcDir: "./",
   /*
   ** Build configuration
   */

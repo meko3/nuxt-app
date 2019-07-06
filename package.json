@@ -11,6 +11,7 @@
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production ts-node .nuxt/index.js",
+    "generate:local": "nuxt generate",
     "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy": "npx gh-pages -d dist/ -e docs -b master",
     "storybook": "start-storybook -p 6006",
