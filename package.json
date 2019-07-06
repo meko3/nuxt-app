@@ -14,7 +14,7 @@
     "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy": "npx gh-pages -d dist/ -e docs -b master",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s .storybook -o docs"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
