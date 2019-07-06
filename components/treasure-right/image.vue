@@ -1,5 +1,5 @@
 <template>
-  <div class="treasure"><div class="title">{{ title }}</div></div>
+  <div class="treasure"><p>{{ title }}</p></div>
 </template>
 
 <style scoped>
@@ -7,13 +7,7 @@
   z-index: 1;
   height: 200px;
   background: url(~assets/treasure.svg) no-repeat, url(~assets/label.svg) no-repeat;
-  background-position: left top, 100px 35px;
-}
-.title {
-  font-size: 30px;
-  font-weight: bold;
-  color: #C5C0AC;
-  padding: 145px 0 0 95px;
+  background-position: 350px top, left 35px;
 }
 </style>
 

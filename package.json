@@ -12,7 +12,7 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production ts-node .nuxt/index.js",
     "generate:local": "nuxt generate",
-    "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "generate": "npx cross-env DEPLOY_ENV=GH_PAGES nuxt generate && touch dist/.nojekyll",
     "deploy": "npx gh-pages -d dist/ -e docs -b master",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s .storybook -o docs"
